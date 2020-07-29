@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!--for scaling across various devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--set the color for the URL bar on Chrome on Android phones/tablets-->
+    <meta name="theme-color" content="#000000">
+
+    <title>Title of Page</title>
+
+    <!--stylesheet-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!--javascript-->
+    <script src="https://unpkg.com/webcomponents.js@^0.7.24/webcomponents-lite.min.js" async></script>
+    <link rel="import" href="/bower_components/simpla-text/simpla-text.html">
+    <link rel="import" href="/bower_components/simpla-img/simpla-img.html">
+    <link rel="import" href="/bower_components/simpla-admin/simpla-admin.html" async>
+
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+    <!-- Block of editable richtext -->
+    <simpla-text path="/text"></simpla-text>
+
+    <!-- An editable image -->
+    <img is="simpla-img" path="/img">
+
+    <!-- Dynamic collection -->
+    <simpla-collection path="/gallery" as="photo">
+        <template>
+            <img is="simpla-img" path="/gallery/[photo]/img">
+            <simpla-text path="/gallery/[photo]/caption"></simpla-text>
+        </template>
+    </simpla-collection>
+</body>
+
+</html>
