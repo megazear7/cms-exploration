@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_common_contents",
+  "info": {
+    "name": "Content",
+    "icon": "credit-card"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "richtext"
+    }
+  }
+}

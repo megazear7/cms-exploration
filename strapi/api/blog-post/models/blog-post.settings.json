@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "name": "Blog Post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Body": {
+      "type": "richtext",
+      "required": true
+    },
+    "characters": {
+      "collection": "character",
+      "via": "blog_posts",
+      "dominant": true
+    },
+    "Title": {
+      "type": "string",
+      "private": false,
+      "required": true,
+      "unique": true
+    },
+    "Example": {
+      "type": "dynamiczone",
+      "components": [
+        "common.captioned-image",
+        "common.content",
+        "common.carousel"
+      ]
+    }
+  }
+}
